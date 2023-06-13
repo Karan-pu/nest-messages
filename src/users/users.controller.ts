@@ -40,7 +40,7 @@ export class UsersController {
     @Serialize(UserDto)
     @Get('/:id')
     async findUser (@Param('id') id:string) {
-        console.log("Handler is running");
+        console.log("Handler is working");
         const user = this.userService.findOne(parseInt(id));
         if (!user) {
             throw new NotFoundException('user not found');
